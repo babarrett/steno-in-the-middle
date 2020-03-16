@@ -48,6 +48,15 @@ Later, as needed:
     - e-ink is another option: seeedstudio.com
 * 1 LiPo battery and Charging circuit, or USB power brick
 
+### POSSIBLE HARDWARE CONFIGURATIONS
+
+![Ideal configuration](ideal_config.png)
+
+![Bluetooth configuration](bluetooth_config.png)
+
+![Two Raspberry Pis](https://github.com/babarrett/steno-in-the-middle/blob/master/2pis_config.png)
+
+
 
 ### OUTSTANDING PROBLEMS TO SOLVE
 

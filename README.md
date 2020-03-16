@@ -3,11 +3,5 @@ A stand-alone, hardware+software interface that attaches between a keyboard and 
 
 Uses Plover.
 
-[See: ](Steno in the middle README.md)
-
-![Ideal configuration](ideal_config.png)
-
-![Bluetooth configuration](bluetooth_config.png)
-
-![alt text]([)https://github.com/babarrett/steno-in-the-middle/blob/master/2pis_config.png)
+See: [the full readme](Steno%20in%20the%20middle%20README.md)
 

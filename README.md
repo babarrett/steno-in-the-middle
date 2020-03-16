@@ -5,9 +5,9 @@ Uses Plover.
 
 [See: ](Steno in the middle README.md)
 
-![alt text][ideal_config.png]
+![Ideal configuration](ideal_config.png)
 
-![alt text][bluetooth_config.png]
+![Bluetooth configuration](bluetooth_config.png)
 
-![alt text][https://github.com/babarrett/steno-in-the-middle/blob/master/2pis_config.png]
+![alt text]([)https://github.com/babarrett/steno-in-the-middle/blob/master/2pis_config.png)
 

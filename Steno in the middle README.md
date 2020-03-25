@@ -23,7 +23,8 @@
     - Output to host computer
     - Write to SD card datafile (stand-alone, off-line recording)
     - Output to host computer, ane write to SD card at the same time
-* Add: Screen to display resultant text when writing to SD. 3.5", or even less, may be enough.
+* Add: WiFi access to any smart-phone or tablet and use the display via SSH, VNC, or web server for setings, brief definition, and displaying resultant text when writing to SD or...
+* Add: ...Screen to display resultant text when writing to SD. A 3.5" screen, or even less, may be enough.
 * Add: Some kind of case.
 * Add: Battery
 * Add: ...and charger
@@ -82,7 +83,7 @@ There may be ways to do it that I am unaware of. The best I can think of at the 
 
 
 
-### Software Development Plan
+### SOFTWARE DEVELOPMENT PLAN
 
 Need to determine:
 

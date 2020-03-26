@@ -34,20 +34,22 @@
 
 Current thinking, single units, for development
 
-* 1 Keyboard that supports TX Bolt or USB(NKRO) protocols. Use your own.
+* 1 Keyboard that supports TX Bolt or USB(NKRO) protocols. Use your own. For example [Georgi](https://www.gboards.ca/product/georgi), $95, or [TinyMod](https://stenomod.blogspot.com/2019/07/how-to-buy-tinymod.html), $160
 * 1 Raspberry Pi Zero W starter pack \~$27. https://www.amazon.com/dp/B0748MPQT4
     - Runs Linux, Python, Apache, and as Linux USB Gadget to simulate a keyboard to host.
     - But there may be alternatives to the Raspberry Pi Zero that have a better selection of USB ports.
 * 1 SD card, 32+GB $15.40 https://www.amazon.com/gp/product/B00U77V8AM/ ;
     or 64GB fast (270Mbs) $33;  https://www.amazon.com/dp/B07QM348D9
+* Smart phone or tablet (which you alreqaddy have) for display.
 
 Later, as needed:
 
 * 1 Raspberry Pi case
+* 1 LiPo battery and Charging circuit, or USB power brick
 * 1 Monitor screen $22.50 for 5" https://www.amazon.com/gp/product/B00YE1E1UQ/
     - Needs short HDMI-mini HDMI cable, hard to find
     - e-ink is another option: seeedstudio.com
-* 1 LiPo battery and Charging circuit, or USB power brick
+
 
 ### POSSIBLE HARDWARE CONFIGURATIONS
 

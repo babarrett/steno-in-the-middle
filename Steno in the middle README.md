@@ -1,15 +1,29 @@
 
 # Steno in the middle README.md
+
+
+### Steno in the middle -- Elevator pitch:
+Much of the stenography community uses Plover, open source software, written in Python, that runs on the host computer (Windows, macOS, or Linux) in conjunction with a steno machine or keyboard.
+Plover meets most "steno" needs very well, but there are a few places where it cannot be used. They are:
+
+* With "locked-down" systems. Usually corporate host computers where only software approved by, and installed by, IT departments is allowed.
+* With smart phones and tablets where Plover cannot be installed.
+* With a dedicated, smaller, portable, device used only for collecting text (to be processed later).
+
+"Steno in the middle" is intended to solve these problems by inserting a device between a steno keyboard and the host. The device will run Plover and optionally display status to a separate, local display (phone).
+
+The software can be open source. The hardware inexpensive.
+
 ## OVERVIEW
 
-### "Plover in the middle" Goals:
+### "Steno in the middle" Goals:
 * Create a single, stand-alone, hardware and software interface that attaches between a keyboard and host computer (Windows, macOS, Linux, etc.)
 * The interface executes a large subset of Plover code.
 * The interface receives steno output from the keyboard, interprets the chords, and sends standard USB HID keyboard keycodes to the host computer (as if the text was typed by an operator).
 * The interface can be transfered between any combination of host computers and "Plover compatible" (Steno) keyboards.
 * Ideally, works with USB (NKRO), Gemini PR, and TX Bolt protocols. TBD.
 
-### "Plover in the middle" characteristics:
+### "Steno in the middle" characteristics:
 * Minimal viable product:
     - Use with a "Plover compatible" (Steno) keyboard...
     - connected to an off-board microcomputer...

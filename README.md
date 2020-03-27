@@ -32,13 +32,13 @@ The software can be open source. The hardware inexpensive.
     - The other end of the microcomputer connects, through Bluetooth to any host computer.
     - Portable. (Hopefully microcomputer not much bigger than 2x2x4". Battery, cable, and optional power supply extra.)
     - There are no hardware changes or software installations needed for the keyboard or the host computer.
-    The Plover-in-the-middle system is totally independant.
+    The Plover-in-the-middle system is totally independent.
 * Add: Save briefs on the go. (A second SD card could be useful, though not required.)
 * Add: Programmable "switch" for 3 "modes"
     - Output to host computer
     - Write to SD card datafile (stand-alone, off-line recording)
     - Output to host computer, and write to SD card at the same time
-* Add: WiFi access to any smart-phone or tablet and use the display via SSH, VNC, or web server for setings, brief definition, and displaying resultant text when writing to SD or...
+* Add: WiFi access to any smart-phone or tablet and use the display via SSH, VNC, or web server for settings, brief definition, and displaying resultant text when writing to SD or...
 * Add: Battery
 * Add: ...and charger
 
@@ -82,7 +82,7 @@ Later, as needed:
 
 Need to determine:
 
-* Have to power the Raspberry seperatly anyway as something will need to power the keyboard.
+* Have to power the Raspberry separately anyway as something will need to power the keyboard.
 
 On Mac system, proof of concepts:
 
@@ -94,8 +94,11 @@ On Mac system, proof of concepts:
     - Download source from: [github.com/yaptb](https://github.com/yaptb/BlogCode/tree/master/btkeyboard)
 * Get "Bluetooth Keyboard with a Raspberry Pi and Python" working (Code is from 2016, likely needs updating)
 * Clone, examine [Plover source](https://github.com/openstenoproject/plover)
+* Look more at Charley's [Running Plover on a Raspberry Pi](https://stenomod.blogspot.com/2017/03/running-plover-on-raspberry-pi.html) code. Update to current libraries and Python, or use as a guide to redevelop a similar system.
 * Get Plover running "headless," perhaps using stdin / stdout to test.
 * Test basic Plover features and logic.
 * Merge "Bluetooth Keyboard" with "headless Plover."
-* Test, test, tst, and debug.
+* Test, test, test, and debug.
+* Add features.
+* Repeat testing.
 

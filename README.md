@@ -71,6 +71,7 @@ Later, as needed:
     1. **Steno kbd --> USB --> Raspberry Pi --> "serial to HID converter" --> Host**
     - This is Charley's system, which he showed is fundamentally sound. USB in, serial out of the Pi. Charley used a Pi 3, but it seems likely any Pi would work.
     2. **Steno kbd --> USB(OTG) --> USB-in> Raspberry Pi > USB-out > HID  --> Host**
+    - ![Ideal configuration](https://github.com/babarrett/steno-in-the-middle/blob/master/ideal_config.png)
     - This, if it works at all, may only work with a Pi 4. I think (but would love confirmation) that because most Pis run all USB ports off of a single USB hub that a 2-USB port Pi will mostly not work. Requires two USB ports, one for keyboard in, one for output to the host (PC). The Pi 4 is the only Pi I know of without the same-hub limitation.
     3. **Steno kbd --> serial IO --> Raspberry Pi > USB-out > HID --> Host**
     - The serial IO in this case can be Gemini PR, or TX Bolt protocols. Possibly others. This option is limited in that you cannot plug an arbitrary NKRO USB keyboard into the Pi and have it work.

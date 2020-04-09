@@ -64,9 +64,16 @@ Later, as needed:
     - e-ink is another option: seeedstudio.com
 
 
-### POSSIBLE HARDWARE CONFIGURATION
+### POSSIBLE HARDWARE CONFIGURATIONS
 
-![Bluetooth configuration](https://github.com/babarrett/steno-in-the-middle/blob/master/bluetooth_config.png)
+* ![Bluetooth configuration](https://github.com/babarrett/steno-in-the-middle/blob/master/bluetooth_config.png)
+* A [discussion](https://discordapp.com/channels/136953735426473984/322442139906736128/697216672335003689) on the Plover Discord channel, started by Charley stenomod, reveled 3 more hardware approaches to the problem:
+    1. **Steno kbd --> USB --> Raspberry Pi --> "serial to HID converter" --> Host**
+    - This is Charley's system, which he showed is fundamentally sound. USB in, serial out of the Pi. Charley used a Pi 3, but it seems likely any Pi would work.
+    2. **Steno kbd --> USB(OTG) --> USB-in> Raspberry Pi > USB-out > HID  --> Host**
+    - This, if it works at all, may only work with a Pi 4. I think (but would love confirmation) that because most Pis run all USB ports off of a single USB hub that a 2-USB port Pi will mostly not work. Requires two USB ports, one for keyboard in, one for output to the host (PC). The Pi 4 is the only Pi I know of without the same-hub limitation.
+    3. **Steno kbd --> serial IO --> Raspberry Pi > USB-out > HID --> Host**
+    - The serial IO in this case can be Gemini PR, or TX Bolt protocols. Possibly others. This option is limited in that you cannot plug an arbitrary NKRO USB keyboard into the Pi and have it work.
 
 
 
@@ -87,7 +94,10 @@ Need to determine:
 On Mac system, proof of concepts:
 
 * (done) Install Raspberry Pi Zero: OS, SSH over USB, SSH over WiFi, update OS software, install Python3
-* (done) Start github repository for the project
+* (done) Start github repository for the
+* Start with stanographer's plover-pi Docker repository:
+    - https://github.com/stanographer/plover-pi
+    - With Charley's "...the plover_raspbian.sh script did the trick. I did have to edit one line in the script, for cloning the Plover repository."
 * Clone, examine "Bluetooth Keyboard with a Raspberry Pi and Python" source. For background see:
     - [Yet Another Pointless Tech Blog](http://yetanotherpointlesstechblog.blogspot.com/2016/04/emulating-bluetooth-keyboard-with.html),
     and related links

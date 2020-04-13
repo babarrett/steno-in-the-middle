@@ -1,4 +1,3 @@
-
 # Steno in the middle README.md
 
 
@@ -69,23 +68,25 @@ Later, as needed:
 ![Bluetooth configuration](https://github.com/babarrett/steno-in-the-middle/blob/master/bluetooth_config.png)
 * Recent discussions in the Plover Discord server started by [Charley stenomod](https://discordapp.com/channels/136953735426473984/322442139906736128/697216672335003689) and [StarGazer1258](https://discordapp.com/channels/136953735426473984/322442139906736128/698289629249667162) reveled 4 more hardware approaches to the problem:
 
-    1. **Steno kbd --> USB --> Raspberry Pi --> "serial to HID converter" --> Host**
-    - This is Charley's system, which he showed is fundamentally sound. USB in, serial out of the Pi. Charley used a Pi 3, but it seems likely any Pi would work.
-    2. **Steno kbd --> USB(OTG) --> USB-in> Raspberry Pi > USB-out > HID  --> Host**
-    ![Ideal configuration](https://github.com/babarrett/steno-in-the-middle/blob/master/ideal_config.png)
-    - This, if it works at all, may only work with a Pi 4. I think (but would love confirmation) that because most Pis run all USB ports off of a single USB hub that a 2-USB port Pi will mostly not work. Requires two USB ports, one for keyboard in, one for output to the host (PC). The Pi 4 is the only Pi I know of without the same-hub limitation.
-    3. **Steno kbd --> serial IO --> Raspberry Pi > USB-out > HID --> Host**
-    - The serial IO in this case can be Gemini PR, or TX Bolt protocols. Possibly others. This option is limited in that you cannot plug an arbitrary NKRO USB keyboard into the Pi and have it work.
-    4. **TinyMod steno kbd via Plover plugin > to Raspberry Pi Zero (W) > Plover plugin > HID --> Host**
-    - This is StarGazer1258's system. It runs Plover 4 on the Pi, and he wrote a plugin for Plover that imitates Charley's Arduino firmware as a machine, then another plugin that takes the output of Plover and sends it out the USB port as an HID keyboard.
-    - The Arduino that comes on the TinyMob board **is still** available. The Pi IO also goes straight to the kbd matrix.
-    - He uses the NKRO/Serial switch to pick which processor to use. Use the NKRO to use the Pi, or Serial to use the Feather 32u4 (ATmega32u4).
-    He modified the firmware of the 32u4 to do nothing when the switch is on NKRO
-    - His goal was to have the Pi be a part of the board.
+    1. **Steno kbd(TinyMod) --> USB --> Raspberry Pi 3, running minicom --> "serial to HID converter" --> Host**
+    - This is Charley's system. His prototype showed this method is fundamentally sound. USB in, Plover 4 transforms the steno chords, outputs keystrokes to serial through the Linux minicom program.
+    - From there a serial-to-USB interface sends keyboard strokes to the Host USB port.
+    - Charley used a Pi 3, though it seems likely any Pi would work.
+    - [More information](https://github.com/babarrett/steno-in-the-middle/blob/master/charley_version/README.md) is available.
+    2. **TinyMod steno kbd via Plover plugin > to Raspberry Pi Zero (W) > Plover plugin > HID --> Host**
+    - This is StarGazer1258's system. It runs Plover 4 on the Pi, and he wrote a plugin for Plover that imitates Charley's Arduino firmware as a steno machine, then another plugin that takes the output from Plover and sends keyboard strokes out the USB port as an HID keyboard.
+    - The Arduino that comes on the TinyMob board **is still** available for use. The Pi is wired to the Feather 32u4 IO pins, in parallel.
+    - His goal was to have the Pi be a part of the keyboard.
     - Like Charley, the modifiers (Ctrl, Alt, ...) aren't working yet. Other than that it's working, as a regular keyboard, on Windows, Mac, Linux, and an iPhone.
     - Running Plover headless. No screen.
-    - [Github](https://github.com/StarGazer1258/plover-tinymod4) resource is available.
-    - Resource: [Discord posting](https://discordapp.com/channels/136953735426473984/322442139906736128/698289629249667162) announcing the progress.
+    - [More information](https://github.com/babarrett/steno-in-the-middle/blob/master/stargazer_version/README.md) is available.
+     3. **Steno kbd --> USB(OTG) --> USB-in> Raspberry Pi > USB-out > HID  --> Host**
+    ![Ideal configuration](https://github.com/babarrett/steno-in-the-middle/blob/master/ideal_config.png)
+    - Theoretical at this point.
+    - This, if it works at all, may only work with a Pi 4. I think (but would love confirmation) that because most Pis run all USB ports off of a single USB hub that a 2-USB port Pi will mostly not work. Requires two USB ports, one for keyboard in, one for output to the host (PC). The Pi 4 is the only Pi I know of without the same-hub limitation.
+    4. **Steno kbd --> serial IO --> Raspberry Pi > USB-out > HID --> Host**
+    - Theoretical at this point.
+    - The serial IO in this case can be Gemini PR, or TX Bolt protocols. Possibly others. This option is limited in that you cannot plug an arbitrary NKRO USB keyboard into the Pi and have it work.
 
 
 

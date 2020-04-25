@@ -1,6 +1,6 @@
 # Before running this script clone the directory that contains it.
 # cd ~ 
-###### Ins  tead of running stanographer's script,  https://github.com/stanographer/plover-pi.git  use mine.
+###### Instead of running stanographer's script,  https://github.com/stanographer/plover-pi.git  use mine.
 # git clone https://github.com/babarrett/steno-in-the-middle ~/plover-pi
 # -------------------------------------------
 

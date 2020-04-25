@@ -17,42 +17,28 @@ Your second option is to not use PyQt5, but rather run the Pi "headless." In thi
     - my system returns: Linux raspberrypi 4.19.97+ #1294 Thu Jan 30 13:10:54 GMT 2020 armv6l GNU/Linux
 2. ssh to your pi
 3. ```python3 --version``` # If python ver < 3.5 install update (mine was at 3.7.3)
+4. update the OS:
+    - ```sudo apt-get update```
+    - ```git clone https://github.com/openstenoproject/plover.git```
+ 4. git clone (https://github.com/stanographer/plover-pi.git)
+
 4. git clone plover from the Open Steno Project github.
     - ```cd```
     - ```git clone https://github.com/openstenoproject/plover.git```
 5. ```cd plover```
-6. ```pip3 install -r requirements.txt``` # this will take a while.
-7. This **doesn't work**!: ```sudo apt-get install python3-pyqt5```.
-Instead, if needed, and it likely will be, compile and install PyQt5 from scratch on your Pi.
-    - ```sudo apt-get update```
-    - ```sudo apt-get install qt5-default```
-    - ```sudo apt-get install sip-dev```
-8. Making PyQt5 and sip. See instructions here: https://stackoverflow.com/a/55105119
-but try the latest versions. At the time of this writing that is:
-    - sip
-    - \# Compile **sip v4.19.14**
-    - \# The general download page is: https://www.riverbankcomputing.com/software/sip/download
-        - ```cd /usr/src```
-        - ```sudo wget https://www.riverbankcomputing.com/static/Downloads/sip/4.19.22/sip-4.19.22.tar.gz```
-        - ```sudo tar xzf sip-4.19.14.tar.gz```
-        - ```cd sip-4.19.22```
-        - ```sudo python3 configure.py --sip-module PyQt5.sip```
-        - ```sudo make``` # warnings generated.
-        - ```sudo make install```
-    - \# Compile **PyQt5 v 5.13.2**
-    - \# The general download page is: https://www.riverbankcomputing.com/software/pyqt/download5
-        - ```cd /usr/src```
-        - ```sudo wget https://www.riverbankcomputing.com/static/Downloads/PyQt5/5.13.2/PyQt5-5.13.2.tar.gz```
-        - ```sudo tar xzf PyQt5-5.13.2.tar.gz```
-        - ```cd PyQt5-5.13.2```
-        - ```sudo python3 configure.py```
-        - ```sudo make```
-        - Backup SD card
-        - ```cd /usr/src/PyQt5_gpl-5.12/```
-        - ```sudo make install```
+6. Change the requirements by ommiting Qt and sip
+    - ```nano requirements_distribution.txt```
+    - Comment out these 2 lines:
+```
+        # dbus-python==1.2.4; "linux" in sys_platform
+        # PyQt5-sip==4.19.13
+        # PyQt5==5.11.3
+```
+7. ```pip3 install -r requirements.txt``` # this will take a while.
+
 8. Run Plover
-    - ```cd ~/plover```
-    - ```./launch.sh```
+        - ```cd ~/plover```
+        - ```./launch.sh```
 
 
 

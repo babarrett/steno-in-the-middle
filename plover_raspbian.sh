@@ -53,7 +53,7 @@ cd plover
 # pi3d.github.io/html/FAQ.html
 yes | cp -rf ~/plover-pi/requirements/requirements.txt ~/plover
 yes | cp -rf ~/plover-pi/requirements/requirements_plugins.txt ~/plover
-###### Typo? in here twice: yes | cp -rf ~/plover-pi/requirements/requirements_plugins.txt ~/plover
+yes | cp -rf ~/plover-pi/requirements/requirements_distribution.txt ~/plover
 
 pip3 install pydbus
 # Add user pi to 2 groups

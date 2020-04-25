@@ -28,21 +28,23 @@ Instead, if needed, and it likely will be, compile and install PyQt5 from scratc
     - ```sudo apt-get install qt5-default```
     - ```sudo apt-get install sip-dev```
 8. Making PyQt5 and sip. See instructions here: https://stackoverflow.com/a/55105119
+but try the latest versions. At the time of this writing that is:
+    - sip
     - \# Compile **sip v4.19.14**
-    - \# The general download page is: https://www.riverbankcomputing.com/software/sip/download5
+    - \# The general download page is: https://www.riverbankcomputing.com/software/sip/download
         - ```cd /usr/src```
-        - ```sudo wget https://www.riverbankcomputing.com/static/Downloads/sip/4.19.14/sip-4.19.14.tar.gz```
+        - ```sudo wget https://www.riverbankcomputing.com/static/Downloads/sip/4.19.22/sip-4.19.22.tar.gz```
         - ```sudo tar xzf sip-4.19.14.tar.gz```
-        - ```cd sip-4.19.14```
-        - ```sudo python3.6 configure.py --sip-module PyQt5.sip```
+        - ```cd sip-4.19.22```
+        - ```sudo python3 configure.py --sip-module PyQt5.sip```
         - ```sudo make``` # warnings generated.
         - ```sudo make install```
-    - \# Compile **PyQt5 v 5.12**
+    - \# Compile **PyQt5 v 5.13.2**
     - \# The general download page is: https://www.riverbankcomputing.com/software/pyqt/download5
         - ```cd /usr/src```
-        - ```sudo wget https://www.riverbankcomputing.com/static/Downloads/PyQt5/5.12/PyQt5_gpl-5.12.tar.gz```
-        - ```sudo tar xzf PyQt5_gpl-5.12.tar.gz```
-        - ```cd PyQt5_gpl-5.12```
+        - ```sudo wget https://www.riverbankcomputing.com/static/Downloads/PyQt5/5.13.2/PyQt5-5.13.2.tar.gz```
+        - ```sudo tar xzf PyQt5-5.13.2.tar.gz```
+        - ```cd PyQt5-5.13.2```
         - ```sudo python3 configure.py```
         - ```sudo make```
         - Backup SD card
@@ -86,7 +88,7 @@ Steps:
 1. Monitor HID keyboard with:
     - python -m evdev.evtest
 1. Back-up SD card to Mac.
-1. Create a USB to Bluetooth pass-through app.
+1. Create a USB (HID) to Bluetooth pass-through app.
 
 
 

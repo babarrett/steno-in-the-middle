@@ -1,5 +1,5 @@
 # Before running this script clone the directory that contains it.
-# cd ~ 
+# cd ~
 ###### Instead of running stanographer's script,  https://github.com/stanographer/plover-pi.git  use mine.
 # git clone https://github.com/babarrett/steno-in-the-middle ~/plover-pi
 # -------------------------------------------
@@ -15,6 +15,9 @@ sudo apt install 2to3
 
 # Install PyQt5
 ###### sudo apt install -y python3-babel qt5-qmake qt5-default
+
+# update pip, if needed
+pip install -- user --upgrade pip
 
 # Install pip.
 sudo apt install pipenv
@@ -37,8 +40,9 @@ sudo apt install pipenv
 ###### sudo make
 ###### sudo make install
 
-# Remove native pyqt5.
-###### sudo apt remove python3-pyqt5
+# Remove native pyqt5. Added.
+sudo rm -rf /usr/lib/python3/dist-packages/PyQt5/uic
+sudo apt remove python3-pyqt5
 
 # Return to repo dir.
 cd ~
@@ -56,9 +60,10 @@ yes | cp -rf ~/plover-pi/requirements/requirements_plugins.txt ~/plover
 yes | cp -rf ~/plover-pi/requirements/requirements_distribution.txt ~/plover
 
 pip3 install pydbus
-# Add user pi to 2 groups
+# Add user pi to 3 groups
 sudo usermod -a -G uucp pi
 sudo usermod -a -G dialout pi
+sudo usermod -a -G staff pi
 
 # Install Plover.
 pip3 install --user -r requirements.txt

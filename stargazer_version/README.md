@@ -6,7 +6,7 @@
 * Source: Plover Discord server / date: April 10, 2020
 * [Discord starting message](https://discordapp.com/channels/136953735426473984/322442139906736128/698289629249667162)
 * Connnection method:
-    - `TinyMod steno kbd via Plover plugin > to Raspberry Pi Zero (W) > Plover plugin > HID --> Host`
+    - `TinyMod steno kbd, hardwired --> via Plover plugin > to Raspberry Pi Zero (W) > Plover plugin > HID --> Host`
 
 ### Project Status
 * This is StarGazer1258's system. It runs Plover 4 on the Pi Zero (W)
@@ -30,10 +30,17 @@
 
 
 ### Pros
+* Small enough to fit *in* the keyboard. Very compact.
+* Least expensive Pi
+* Simple, BOM is: Pi 0, SD card, TinyMod keyboard, and some wire.
 
 
 ### Cons
 * Pi takes nearly 2 minutes to boot, though this may be a universal issue with Pis for now.
+* Hard-wired to keyboard (soldering)
+* New wiring and software for every keyboard you want to use
+* no way to monitor the output from the Pi.
+
 
 ### Resources
 * A carrying case for the TinyMod, on [Amazon](https://www.amazon.com/dp/B07KM943K4).

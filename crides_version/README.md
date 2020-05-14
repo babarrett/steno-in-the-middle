@@ -19,6 +19,7 @@
 * firmware in qmk, dict compiler in compiler, written in Rust
 * Requires hitting "enter" on another keyboard.
 * I can implement the most used features of Plover on a keyboard, but I still need more time to refine the design.
+* Proposed controller: either the [Adafruit Feather 32u4 Bluefruit LE?](https://www.adafruit.com/product/2829) (which is what I have right now) or the [Adafruit Feather nRF52840 Express](https://www.adafruit.com/product/4062) (which is a Cortex-M4). The latter has 256KB of RAM, which is 100+ times than what I have ever used.
 
 
 

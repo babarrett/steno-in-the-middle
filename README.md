@@ -125,3 +125,4 @@ On Mac system, proof of concepts:
 * Add features.
 * Repeat testing.
 
+See also: https://github.com/crides/steno He's building a similar kayboard.
